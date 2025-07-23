@@ -2,5 +2,12 @@
 name = "galvanic"
 version = "0.1.0"
 edition = "2018"
+authors = ["Immanuel <2495.immanuel@gmail.com>"]
 
-[dependencies]
+# the profile used for `cargo build`
+[profile.dev]
+panic = "abort" # disable stack unwinding on panic
+
+# the profile used for `cargo build --release`
+[profile.release]
+panic = "abort" # disable stack unwinding on panic
